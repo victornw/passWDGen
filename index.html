@@ -5,18 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PassWD Generator</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <h1 class="main-header">PassWD Generator</h1>
-      <p>Type the characters amount of your password</p>
-      <p class="password">Your password!</p>
+      <p class="text">Please, type the characters amount of your password</p>
     </header>
     <main>
       <form>
-        <input class="input" type="number" placeholder="Amount of characters" />
+        <input
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          class="input"
+          max="22"
+          maxlength="2"
+          type="number"
+          placeholder="Number between 5-19"
+        />
         <button class="send" type="button">OK</button>
       </form>
+      <p class="p">Your password:</p>
+      <p class="password">PASSWD</p>
       <script src="script.js"></script>
     </main>
   </body>
