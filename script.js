@@ -12,6 +12,14 @@ function randomString(userInput) {
 
 document.querySelector(".send").addEventListener("click", function () {
   let userNumber = Number(document.querySelector("input").value);
-  document.querySelector(".password").textContent = randomString(userNumber);
-  passwd = "";
+  if (userNumber < 0 || userNumber > 22) {
+    return alert("Type a number between 1 and 22");
+  } else {
+    document.querySelector(".password").textContent = randomString(userNumber);
+    passwd = "";
+  }
 });
+
+//Fazer:
+//Limite de valor no input ✅
+// auto ctrl c
