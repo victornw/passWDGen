@@ -22,4 +22,3 @@ document.querySelector(".send").addEventListener("click", function () {
 
 //Fazer:
 //Limite de valor no input ✅
-// auto ctrl c
